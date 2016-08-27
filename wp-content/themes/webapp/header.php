@@ -17,6 +17,22 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<!--GOOGLE FONTS-->
+<link href='http://fonts.googleapis.com/css?family=Hind:400,300,600,500,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+<!-- Bootstrap & Styles -->
+<link href="<?php bloginfo('stylesheet_directory') ?>/assets/css/bootstrap.css" rel="stylesheet">
+<link href="<?php bloginfo('stylesheet_directory') ?>/assets/css/bootstrap-theme.css" rel="stylesheet">
+<link href="<?php bloginfo('stylesheet_directory') ?>/assets/css/block_grid_bootstrap.css" rel="stylesheet">
+<link href="<?php bloginfo('stylesheet_directory') ?>/assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="<?php bloginfo('stylesheet_directory') ?>/assets/css/owl.carousel.css" rel="stylesheet">
+<link href="<?php bloginfo('stylesheet_directory') ?>/assets/css/owl.theme.css" rel="stylesheet">
+<link href="<?php bloginfo('stylesheet_directory') ?>/assets/css/animate.min.css" rel="stylesheet" />
+<link href="<?php bloginfo('stylesheet_directory') ?>/assets/css/jquery.circliful.css" rel="stylesheet" />
+<link href="<?php bloginfo('stylesheet_directory') ?>/assets/css/slicknav.css" rel="stylesheet" />
+
+
 <?php wp_head(); ?>
 </head>
 
@@ -24,27 +40,68 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'webapp' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+	<!-- TOP HEADER
+	=================================================================-->
+	<div class="top">
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+		<!--START MENU-->
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="logo">
+					<a href="index.html"><img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/logo.png" alt="" />
+					</a>
+				</div>
+			</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'webapp' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+			<!--START NAVBAR-->
+			<div class="col-sm-9">
 
-	<div id="content" class="site-content">
+				<?php
+					wp_nav_menu( array(
+							'theme_location' 	=> 'primary',
+							'container' 		=> 'nav',
+							'container_class' 	=> '',
+							'container_id' 	=> 'desktop-menu',
+							'menu_class' 		=> 'sf-menu',
+							'menu_id'			=> 'navigation'
+						)
+					)
+				?>
+
+
+<!--				<nav id="desktop-menu">-->
+<!--					<ul class="sf-menu" id="navigation">-->
+<!--						<li class="current"><a href="#">Home</a>-->
+<!--						</li>-->
+<!--						<li><a href="#">Services</a>-->
+<!--							<ul>-->
+<!--								<li><a href="shared.html"><i class="fa fa-file"></i> Website</a>-->
+<!--								</li>-->
+<!--								<li><a href="vps.html">SEO & Optimization</a>-->
+<!--								</li>-->
+<!--								<li><a href="servers.html">Social Network</a>-->
+<!--								</li>-->
+<!--								<li><a href="servers.html">Marketing on internet</a>-->
+<!--								</li>-->
+<!--							</ul>-->
+<!--						</li>-->
+<!--						<li><a href="#">Our works</a>-->
+<!--						</li>-->
+<!--						<li><a href="blog.html">Blog</a>-->
+<!--						<li><a href="#">About us</a>-->
+<!--						</li>-->
+<!--						<li><a href="contact.html">Contact</a>-->
+<!---->
+<!--						</li>-->
+<!--					</ul>-->
+<!--				</nav>-->
+
+
+
+			</div>
+			<!--END NAVBAR-->
+		</div>
+		<!--END MENU-->
+	</div>
+	<!-- End of HEADER
+	=================================================================-->
