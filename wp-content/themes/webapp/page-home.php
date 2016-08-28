@@ -3,13 +3,46 @@
     Template Name: Home Page
  */
 
-// Get the fields
+// Custom Fields
 $first_btn_text     = get_post_meta( 49, 'first_btn_text', true);
 $first_text         = get_post_meta( 49, 'first_text', true);
 $first_title        = get_post_meta( 49, 'first_title', true);
 $second_btn_text    = get_post_meta( 49, 'second_btn_text', true);
 $second_text        = get_post_meta( 49, 'second_text', true);
 $second_title       = get_post_meta( 49, 'second_title', true);
+
+// Advanced Custom Fields
+$first_image_group_1         = get_field('first_image_group_1');
+$first_title_group_1         = get_field('first_title_group_1');
+$first_text_group_1          = get_field('first_text_group_1');
+
+$second_image_group_1        = get_field('second_image_group_1');
+$second_title_group_1        = get_field('second_title_group_1');
+$second_text_group_1         = get_field('second_text_group_1');
+
+$third_image_group_1        = get_field('third_image_group_1');
+$third_title_group_1        = get_field('third_title_group_1');
+$third_text_group_1         = get_field('third_text_group_1');
+
+$fourth_image_group_1        = get_field('fourth_image_group_1');
+$fourth_title_group_1        = get_field('fourth_title_group_1');
+$fourth_text_group_1         = get_field('fourth_text_group_1');
+
+$first_image_group_2         = get_field('first_image_group_2');
+$first_title_group_2         = get_field('first_title_group_2');
+$first_text_group_2          = get_field('first_text_group_2');
+
+$second_image_group_2        = get_field('second_image_group_2');
+$second_title_group_2        = get_field('second_title_group_2');
+$second_text_group_2         = get_field('second_text_group_2');
+
+$third_image_group_2        = get_field('third_image_group_2');
+$third_title_group_2        = get_field('third_title_group_2');
+$third_text_group_2         = get_field('third_text_group_2');
+
+$fourth_image_group_2        = get_field('fourth_image_group_2');
+$fourth_title_group_2        = get_field('fourth_title_group_2');
+$fourth_text_group_2         = get_field('fourth_text_group_2');
 
 get_header(); ?>
 
@@ -81,32 +114,76 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="row spacing-70">
-        <div class="col-sm-4">
+    <div class="row spacing-40">
+        <div class="col-sm-3">
             <div class="feature wow zoomIn" data-wow-delay="0.2s">
-                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/rocket.png" alt="" />
-                <h4>Your Website Faster</h4>
-                <p>Sustainable, liberal facilitate change movements outcomes Millennium Development Goals.</p>
+                <img src="<?php echo $first_image_group_1['url'] ?>" alt="<?php echo $first_image_group_1['alt']  ?>"/>
+                <h4><?php echo $first_title_group_1 ?></h4>
+                <p><?php echo $first_text_group_1 ?></p>
             </div>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <div class="feature wow zoomIn" data-wow-delay="0.4s">
-                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/ssd.png" alt="" />
-                <h4>SSD Drives</h4>
-                <p>John Lennon, involvement Gandhi, working alongside cornerstone. Arab Spring; honesty save lives think.</p>
+                <img src="<?php echo $second_image_group_1['url'] ?>" alt="<?php echo $second_image_group_1['alt'] ?>"/>
+                <h4><?php echo $second_title_group_1 ?></h4>
+                <p><?php echo $second_text_group_1 ?></p>
             </div>
         </div>
 
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <div class="feature wow zoomIn" data-wow-delay="0.6s">
-                <img src="<?php bloginfo('stylesheet_directory') ?>/assets/img/secure.png" alt="" />
-                <h4>Highest Data Security</h4>
-                <p>Respond our grantees and partners, youth, fight against malnutrition experience in the field detection.</p>
+                <img src="<?php echo $third_image_group_1['url'] ?>" alt="<?php echo $third_image_group_1['alt'] ?>"/>
+                <h4><?php echo $third_title_group_1 ?></h4>
+                <p><?php echo $third_text_group_1 ?></p>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="feature wow zoomIn" data-wow-delay="0.6s">
+                <img src="<?php echo $fourth_image_group_1['url'] ?>" alt="<?php echo $fourth_image_group_1['alt'] ?>"/>
+                <h4><?php echo $fourth_title_group_1 ?></h4>
+                <p><?php echo $fourth_text_group_1 ?></p>
             </div>
         </div>
 
     </div>
+
+    <div class="row spacing-40">
+        <div class="col-sm-3">
+            <div class="feature wow zoomIn" data-wow-delay="0.2s">
+                <img src="<?php echo $first_image_group_2['url'] ?>" alt="<?php echo $first_image_group_2['alt']  ?>"/>
+                <h4><?php echo $first_title_group_2 ?></h4>
+                <p><?php echo $first_text_group_2 ?></p>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="feature wow zoomIn" data-wow-delay="0.4s">
+                <img src="<?php echo $second_image_group_2['url'] ?>" alt="<?php echo $second_image_group_2['alt'] ?>"/>
+                <h4><?php echo $second_title_group_2 ?></h4>
+                <p><?php echo $second_text_group_2 ?></p>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="feature wow zoomIn" data-wow-delay="0.6s">
+                <img src="<?php echo $third_image_group_2['url'] ?>" alt="<?php echo $third_image_group_2['alt'] ?>"/>
+                <h4><?php echo $third_title_group_2 ?></h4>
+                <p><?php echo $third_text_group_2 ?></p>
+            </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div class="feature wow zoomIn" data-wow-delay="0.6s">
+                <img src="<?php echo $fourth_image_group_2['url'] ?>" alt="<?php echo $fourth_image_group_2['alt'] ?>"/>
+                <h4><?php echo $fourth_title_group_2 ?></h4>
+                <p><?php echo $fourth_text_group_2 ?></p>
+            </div>
+        </div>
+
+    </div>
+    
 </section>
 <!-- End of Features -->
 
